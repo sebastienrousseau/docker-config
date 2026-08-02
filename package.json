@@ -1,6 +1,6 @@
 {
   "name": "@sebastienrousseau/docker-config",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "Shareable Docker container configuration providing multi-stage build and security rules.",
   "author": "Sebastien Rousseau <sebastienrousseau@users.noreply.github.com>",
   "license": "ISC",
