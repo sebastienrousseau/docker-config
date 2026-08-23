@@ -1,4 +1,4 @@
-<!-- SPDX-License-Identifier: ISC -->
+<!-- SPDX-License-Identifier: Apache-2.0 OR MIT>
 
 <p align="center">
   <img src="./docker-config.svg" alt="docker-config logo" width="128" />

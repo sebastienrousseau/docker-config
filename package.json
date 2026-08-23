@@ -3,7 +3,7 @@
   "version": "0.0.2",
   "description": "Shareable Docker container configuration providing multi-stage build and security rules.",
   "author": "Sebastien Rousseau <sebastienrousseau@users.noreply.github.com>",
-  "license": "ISC",
+  "license": "Apache-2.0 OR MIT",
   "homepage": "https://github.com/sebastienrousseau/docker-config#readme",
   "repository": {
     "type": "git",
