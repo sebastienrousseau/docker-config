@@ -1,12 +1,6 @@
 /**
- * Advanced usage example with custom overrides for @sebastienrousseau/docker-config
+ * Advanced docker template interpolation example
  */
-const baseConfig = require("../index.cjs");
-
-const customConfig = Object.assign({}, baseConfig, {
-  _custom: true,
-  _timestamp: new Date().toISOString()
-});
-
-console.log("Custom extended configuration created:");
-console.log(customConfig._custom ? "Custom configuration active" : "Error");
+const template = require("../index.cjs");
+const customDockerfile = template.replace("node:20-alpine", "node:22-alpine");
+console.log("Interpolated Node.js version in Dockerfile template.");

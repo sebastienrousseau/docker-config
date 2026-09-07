@@ -4,9 +4,13 @@ const fs = require("fs");
 const path = require("path");
 
 describe("@sebastienrousseau/docker-config Integration Tests", () => {
-  it("should provide consistent exports across entrypoints", () => {
+  it("should provide consistent exports across entrypoints", async () => {
     const cjs = require("../index.cjs");
-    assert(cjs !== null);
+    const root = require("../index.js");
+    const esm = await import("../index.mjs");
+
+    assert.deepStrictEqual(cjs, root);
+    assert.deepStrictEqual(cjs, esm.default);
   });
 
   it("should comply with the repository layout standard", () => {
@@ -20,10 +24,12 @@ describe("@sebastienrousseau/docker-config Integration Tests", () => {
       assert(fs.existsSync(path.join(root, file)), `Missing required file: ${file}`);
     }
   });
-});
 
-if (require.main === module) {
-  const cjs = require("../index.cjs");
-  assert(cjs !== null);
-  console.log("✅ Integration tests passed.");
-}
+  it("should support JSON serialization and cloning", () => {
+    const cjs = require("../index.cjs");
+    const serialized = JSON.stringify(cjs);
+    assert(serialized.length > 0);
+    const parsed = JSON.parse(serialized);
+    assert.deepStrictEqual(parsed, cjs);
+  });
+});
