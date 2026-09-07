@@ -1,7 +1,7 @@
 site_name = "docker-config"
 site_title = "@sebastienrousseau/docker-config — Shareable Docker container configuration providing multi-stage build and security rules."
 site_description = "Shareable Docker container configuration providing multi-stage build and security rules."
-base_url = "https://config.sebastienrousseau.com/docker-config"
+base_url = "https://sebastienrousseau.com/docker-config/"
 language = "en-GB"
 
 content_dir = "web/content"
