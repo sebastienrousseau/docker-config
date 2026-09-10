@@ -1,3 +1,6 @@
+// SPDX-FileCopyrightText: 2026 Sebastien Rousseau <sebastian.rousseau@gmail.com>
+// SPDX-License-Identifier: Apache-2.0 OR MIT
+
 /**
  * 100% Feature Showcase for @sebastienrousseau/docker-config
  */
@@ -6,11 +9,19 @@ const assert = require("assert");
 
 console.log("=== 100% Feature Showcase: @sebastienrousseau/docker-config ===");
 assert(typeof template === "string" && template.length > 0);
-assert(template.includes("FROM node:20-alpine"), "Must declare multi-stage builder");
+assert(
+  template.includes("FROM node:20-alpine"),
+  "Must declare multi-stage builder",
+);
 assert(template.includes("USER node"), "Must enforce non-root user execution");
-assert(template.includes("NODE_ENV=production"), "Must enforce production environment");
+assert(
+  template.includes("NODE_ENV=production"),
+  "Must enforce production environment",
+);
 
 console.log("  ✓ Multi-stage builder stage: declared");
 console.log("  ✓ Non-root user: verified");
 console.log("  ✓ Template size:", template.length, "bytes");
-console.log("✅ 100% of docker-config directives and security features validated.");
+console.log(
+  "✅ 100% of docker-config directives and security features validated.",
+);
