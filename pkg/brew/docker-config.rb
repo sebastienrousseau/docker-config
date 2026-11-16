@@ -6,7 +6,7 @@
 class DockerConfig < Formula
   desc "Shareable Docker container configuration providing multi-stage build and security rules"
   homepage "https://github.com/sebastienrousseau/docker-config"
-  url "https://registry.npmjs.org/@sebastienrousseau/docker-config/-/docker-config-0.0.7.tgz"
+  url "https://registry.npmjs.org/@sebastienrousseau/docker-config/-/docker-config-0.0.9.tgz"
   license any_of: ["Apache-2.0", "MIT"]
 
   depends_on "node"
